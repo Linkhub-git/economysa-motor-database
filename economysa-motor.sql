@@ -264,11 +264,12 @@ CREATE TABLE `tprom_mechanic_detail` (
   `_mechanic` int(11) NOT NULL COMMENT 'Mecanica a al cual pertenece el registro.',
   `_included` varchar(1) NOT NULL,
   `_type` varchar(1) NOT NULL,
-  `_code` int(11) NOT NULL,
+  `_identifier` int(11) NOT NULL,
+  `_code` varchar(20) NOT NULL,
   `_factor` int(11) NOT NULL DEFAULT '0',
   `_description` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -282,7 +283,8 @@ CREATE TABLE `tprom_mechanic_detail_y` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `_mechanic` int(11) NOT NULL,
   `_type` varchar(1) NOT NULL,
-  `_code` int(11) NOT NULL,
+  `_identifier` int(11) NOT NULL,
+  `_code` varchar(20) NOT NULL,
   `_factor` int(11) NOT NULL DEFAULT '0',
   `_description` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
@@ -339,4 +341,4 @@ CREATE TABLE `tsegu_user` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-07-08 10:24:00
+-- Dump completed on 2022-07-11 15:50:40
